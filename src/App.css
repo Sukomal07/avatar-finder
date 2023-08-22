@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.search-container {
+  width: 30%;
+  margin: auto;
+}
+.searchBox {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+}
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.avatar-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+.avatar-list > div {
+  display: flex;
+  justify-content: center;
+}
