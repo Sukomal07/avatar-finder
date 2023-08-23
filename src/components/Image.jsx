@@ -1,12 +1,15 @@
-import useFetch from "../hooks/useFetch"
+import useFetch from "../hooks/useFetch";
 
-function Image() {
-    const { avatarState } = useFetch();
+function Image({ username }) {
+    const avatarUrl = useFetch(username);
+
     return (
         <div>
-            <img src={avatarState.avatar} alt="photo" className="image" />
+            {avatarUrl && (
+                <img src={avatarUrl} alt={`${username}'s avatar`} className="image" />
+            )}
         </div>
-    )
+    );
 }
 
-export default Image
+export default Image;
